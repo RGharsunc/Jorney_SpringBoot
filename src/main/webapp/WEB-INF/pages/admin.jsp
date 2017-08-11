@@ -121,7 +121,7 @@
         <input type="submit"><br><br><br>
     </form:form>
 
-
+<%--Կար ջան ես էդ սլայդեռի երկրորդ ձևնա --%>
     <label id="topTours"><h3>enter the data of the top tours list please</h3></label>
     <form:form id="topTours" action="/admin/topTour/add">
 

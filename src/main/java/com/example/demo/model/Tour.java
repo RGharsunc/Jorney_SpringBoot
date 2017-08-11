@@ -22,7 +22,7 @@ public class Tour {
     private String image1;
     private String image2;
     private String duration;
-    private long index;
+    private long index;  //this is the index of topTour level
 
     @Id
     public long getId() {
