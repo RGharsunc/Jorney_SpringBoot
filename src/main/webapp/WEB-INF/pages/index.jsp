@@ -115,7 +115,6 @@
                 <h3>Top Destinations</h3>
             </div>
             <div class="boxes">
-                <%--<c:set var="index" value="4"/>--%>
                 <c:forEach items="${tours}" var="tour">
                     <c:if test="${tour.index==1}">
                         <div class="grid_4" >
