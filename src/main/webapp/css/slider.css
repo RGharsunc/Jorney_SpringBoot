@@ -14,9 +14,10 @@
 }
 
 .slider-block {
+	margin-left: 60px;
 	position:relative;
 	height: 724px;
-	
+
 }
 .slider {
 	z-index:2;
