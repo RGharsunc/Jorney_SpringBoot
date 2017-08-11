@@ -49,7 +49,7 @@
     <link rel="stylesheet" media="screen" href="/css/ie.css">
     <![endif]-->
 </head>
-<body class="page1">
+<body class="page1" >
 <header>
     <div class="container_12">
         <div class="grid_12">
