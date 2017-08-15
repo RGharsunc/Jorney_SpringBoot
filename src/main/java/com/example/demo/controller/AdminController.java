@@ -7,6 +7,7 @@ import com.example.demo.services.AsdService;
 import com.example.demo.services.SliderService;
 import com.example.demo.services.TourService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -22,11 +23,14 @@ import java.util.Set;
  */
 @Controller
 public class AdminController {
+    @Value("${jorney.filedownload.path}")
+    private String downloadPath;
+
 
     @Autowired
     private TourService tourService;
     @Autowired
-    private  AsdService asdService;
+    private AsdService asdService;
     @Autowired
     private SliderService sliderService;
 
@@ -45,7 +49,7 @@ public class AdminController {
     @ResponseBody
     @RequestMapping(value = "/getImage", method = RequestMethod.GET)
     public byte[] getImageAsByteArray(@RequestParam("filename") String filename) throws Exception {
-        InputStream in = new FileInputStream("D:\\java\\" + filename);
+        InputStream in = new FileInputStream(downloadPath + filename);
         return org.apache.commons.io.IOUtils.toByteArray(in);
     }
 
@@ -65,7 +69,7 @@ public class AdminController {
     public String setTopTours(@RequestParam("toursId1") long id1,
                               @RequestParam("toursId2") long id2,
                               @RequestParam("toursId3") long id3) {
-       tourService.topToursSet(id1,id2,id3);
+        tourService.topToursSet(id1, id2, id3);
 
         return "redirect:/admin";
     }
