@@ -1,9 +1,6 @@
 package com.example.demo.controller;
 
-import com.example.demo.model.Asd;
-import com.example.demo.model.Slider;
 import com.example.demo.model.Tour;
-import com.example.demo.services.AsdService;
 import com.example.demo.services.SliderService;
 import com.example.demo.services.TourService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,8 +12,6 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.LinkedHashSet;
-import java.util.Set;
 
 /**
  * Created by Vardan on 08.08.2017.
@@ -29,8 +24,7 @@ public class AdminController {
 
     @Autowired
     private TourService tourService;
-    @Autowired
-    private AsdService asdService;
+
     @Autowired
     private SliderService sliderService;
 
@@ -54,16 +48,6 @@ public class AdminController {
     }
 
 
-    @RequestMapping(value = "/addAsd", method = RequestMethod.POST)
-    public String addProduct(@ModelAttribute("addProduct") Asd asd,
-                             @RequestParam("img3") MultipartFile image
-    ) throws IOException {
-        Asd asdWithFile = asdService.fileUpload(asd, image);
-        asdService.addAsd(asdWithFile);
-        return "redirect:/admin";
-
-
-    }
 
     @RequestMapping(value = "/admin/topTour/add")
     public String setTopTours(@RequestParam("toursId1") long id1,

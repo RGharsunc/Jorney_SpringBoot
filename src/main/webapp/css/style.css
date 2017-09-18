@@ -237,7 +237,7 @@ a.link-1:hover {
  -o-box-sizing: border-box;
  box-sizing: border-box;
 	margin-bottom: 25px;
- margin-top: 3px;
+ margin-top: 5px;
  position: relative;
 }
 
@@ -313,6 +313,7 @@ header h1 a img {
 	background: #fff;
 	width: 1270px;
 	margin: 0 auto;
+
 }
 .boxes {
 	margin-bottom: 70px;
@@ -550,9 +551,15 @@ a.gal:hover img {
 }
 
 .text1 {
-	font-size: 16px;
-	line-height: 19px;
-	color: #263555;
+	font-size: 25px;
+	line-height: 30px;
+	color: #c3fffa;
+}
+
+.text111 {
+	font-size: 20px;
+	line-height: 20px;
+	color: #c3fffa;
 }
 
 .page1 .text1 {
@@ -753,6 +760,13 @@ blockquote p {
 	text-transform: uppercase;
 	color: #38afe5;
 	font-size: 16px;
+}
+.price111 {
+	padding-top: 4px;
+	display: block;
+	/*text-transform: uppercase;*/
+	color: #ffc343;
+	font-size: 14px;
 }
 
 .price {

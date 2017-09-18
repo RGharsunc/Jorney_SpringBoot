@@ -21,7 +21,7 @@ public class Tour {
     private String arriveDate;
     private String image1;
     private String image2;
-    private String duration;
+    private int duration;
     private long index;  //this is the index of topTour level
 
     @Id
@@ -107,15 +107,15 @@ public class Tour {
         this.image2 = image2;
     }
 
-    public String getDuration() {
+    public int getDuration() {
         return duration;
     }
 
-    public void setDuration(String duration) {
+    public void setDuration(int duration) {
         this.duration = duration;
     }
 
-  @Column(name = "level")
+    @Column(name = "level")
     public long getIndex() {
         return index;
     }

@@ -20,6 +20,7 @@ public class JorneyApplication extends WebMvcConfigurerAdapter {
 		SpringApplication.run(JorneyApplication.class, args);
 	}
 
+
 	@Bean
 	public InternalResourceViewResolver jspViewResolver() {
 		InternalResourceViewResolver resolver = new InternalResourceViewResolver();

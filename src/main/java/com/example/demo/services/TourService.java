@@ -1,13 +1,19 @@
 package com.example.demo.services;
 
+import com.example.demo.model.EntityFromSearchBar;
 import com.example.demo.model.Tour;
 import com.example.demo.repository.TourRepository;
+import com.example.demo.specifications.TourSpecifications;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.*;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
@@ -19,7 +25,7 @@ import java.util.Set;
 public class TourService {
 
     @Autowired
-    private  TourRepository tourRepository;
+    private TourRepository tourRepository;
 
     public List<Tour> getTours() {
 
@@ -74,5 +80,40 @@ public class TourService {
         setTopTourIndexById(id1, 1);
         setTopTourIndexById(id2, 2);
         setTopTourIndexById(id3, 3);
+    }
+
+
+    public Date parseStringToDate(String strDate) {
+        SimpleDateFormat formatter = new SimpleDateFormat("dd-mm-yy");
+        Date date = null;
+        try {
+            date = formatter.parse(strDate);
+
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return date;
+    }
+
+    public List<Tour> findbyNameAndPriceAfter() {
+        double price = 20;
+        String name = null;
+        List<Tour> tours = tourRepository.findToursByNameAndPriceAfter(name, price);
+        return tours;
+    }
+
+    public List<Tour> getToursList() {
+        return tourRepository.findAll();
+    }
+
+    public Tour getById(long id) {
+        return tourRepository.findOne(id);
+    }
+
+    public List<Tour> getBySearchBarData(EntityFromSearchBar esf) {
+        TourSpecifications ts = new TourSpecifications(esf);
+        List<Tour> tours = tourRepository.findAll(ts);
+        return tours;
+
     }
 }

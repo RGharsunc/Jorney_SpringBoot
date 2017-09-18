@@ -19,7 +19,7 @@ public class UserController {
     @RequestMapping(value = "/user/register")
     public String registerUser(@ModelAttribute UserEntity userEntity) {
         userService.registerUser(userEntity);
-        return "redirect:/index";
+        return "redirect:/home";
     }
 
 

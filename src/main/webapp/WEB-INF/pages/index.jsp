@@ -52,17 +52,16 @@
 <header>
     <div class="container_12">
         <div class="grid_12">
-            <h1><a href="/index"><img src="/images/BlueBirdLogo1.png" alt="" width="250"></a></h1>
+            <h1><a href="/home"><img src="/images/BlueBirdLogo1.png" alt="" width="250"></a></h1>
             <div class="clear"></div>
         </div>
         <div class="menu_block">
             <nav>
                 <ul class="sf-menu">
-                    <li class="current"> <a href="/index">Home</a>
-                    </li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="tours.html">Tours</a></li>
-                    <li><a href="contacts.html">Contacts</a></li>
+                    <li class="current"> <a href="/home">Home</a></li>
+                    <li><a href="/gallery">Gallery</a></li>
+                    <li><a href="/tours">Tours</a></li>
+                    <%--<li><a href="/contacts">Contacts</a></li>--%>
                 </ul>
             </nav>
             <div class="clear"></div>
@@ -104,7 +103,7 @@
     <div class="content">
         <div class="container_12">
             <div class="grid_12">
-                <h3>Kar jan sra het em <br>Top Destinations</h3>
+                <h3>Top Destinations</h3>
             </div>
             <div class="boxes">
                 <c:forEach items="${tours}" var="tour">

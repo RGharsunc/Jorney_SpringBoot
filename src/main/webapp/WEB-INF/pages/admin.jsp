@@ -53,13 +53,13 @@
 <header>
     <div class="container_12">
         <div class="grid_12">
-            <h1><a href="index"><img src="/images/BlueBirdLogo1.png" alt="" width="250"></a></h1>
+            <h1><a href="/home"><img src="/images/BlueBirdLogo1.png" alt="" width="250"></a></h1>
             <div class="clear"></div>
         </div>
         <div class="menu_block">
             <nav>
                 <ul class="sf-menu">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="/home">Home</a></li>
                     <%--<li><a href="about.html">About</a>--%>
                     <%--<ul>--%>
                     <%--<li><a href="#">Agency</a></li>--%>
@@ -67,10 +67,10 @@
                     <%--<li><a href="#">Team</a></li>--%>
                     <%--</ul>--%>
                     <%--</li>--%>
-                    <li class="current"><a href="gallery.html">Gallery</a></li>
-                    <li><a href="tours.html">Tours</a></li>
+                    <li><a href="/gallery">Gallery</a></li>
+                    <li><a href="/tours">Tours</a></li>
                     <%--<li><a href="blog.html">Blog</a></li>--%>
-                    <li><a href="contacts.html">Contacts</a></li>
+                    <li><a href="/contacts">Contacts</a></li>
                 </ul>
             </nav>
             <div class="clear"></div>

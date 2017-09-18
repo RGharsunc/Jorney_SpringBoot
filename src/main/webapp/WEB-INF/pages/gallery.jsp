@@ -35,13 +35,13 @@
 <header>
     <div class="container_12">
         <div class="grid_12">
-            <h1><a href="index"><img src="/images/BlueBirdLogo1.png" alt="" width="250"></a></h1>
+            <h1><a href="/home"><img src="/images/BlueBirdLogo1.png" alt="" width="250"></a></h1>
             <div class="clear"></div>
         </div>
         <div class="menu_block">
             <nav>
                 <ul class="sf-menu">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="/home">Home</a></li>
                     <%--<li><a href="about.html">About</a>--%>
                         <%--<ul>--%>
                             <%--<li><a href="#">Agency</a></li>--%>
@@ -50,9 +50,9 @@
                         <%--</ul>--%>
                     <%--</li>--%>
                     <li class="current"><a href="gallery.html">Gallery</a></li>
-                    <li><a href="tours.html">Tours</a></li>
+                    <li><a href="/tours">Tours</a></li>
                     <%--<li><a href="blog.html">Blog</a></li>--%>
-                    <li><a href="contacts.html">Contacts</a></li>
+                    <%--<li><a href="/contacts">Contacts</a></li>--%>
                 </ul>
             </nav>
             <div class="clear"></div>
@@ -69,8 +69,8 @@
             <div class="clear"></div>
             <div class="gallery">
                 <c:forEach items="${tours}" var="tour">
-                    <div class="grid_4"><a href="getImage?filename=${tour.image1}" class="gal img_inner" ><img
-                            src="getImage?filename=${tour.image2}" alt="img2" height="280"></a></div>
+                    <div class="grid_4"><a href="/getImage?filename=${tour.image2}" class="gal img_inner" ><img
+                            src="/getImage?filename=${tour.image1}" alt="img2"  height="280"></a></div>
                 </c:forEach>
                 <%--<div class="grid_4"><a href="images/big2.jpg" class="gal img_inner">--%>
                     <%--<img src="images/page3_img2.jpg" alt="">--%>
